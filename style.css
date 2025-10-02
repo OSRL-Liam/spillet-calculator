@@ -1,0 +1,7 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 16px; max-width: 520px }
+h2 { margin: 0 0 12px }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; margin: 10px 0 }
+input[type=number] { width: 120px; padding: 6px }
+.hint { font-size: 0.9rem; opacity: .8; margin-bottom: 10px }
+.card { border: 1px solid #ddd; border-radius: 12px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.06) }
+#result { font-size: 1.25rem; font-weight: 700; margin-top: 8px }
