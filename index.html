@@ -15,7 +15,7 @@
   <div class="card">
     <div class="row">
       <label for="tstepMin">Time step</label>
-      <div class="input-with-unit">
+      <div class="input-wrap">
         <input id="tstepMin" type="number" min="1" step="1" value="15">
         <span class="unit">mins</span>
       </div>
@@ -23,7 +23,7 @@
 
     <div class="row">
       <label for="hrs">Hours of release</label>
-      <div class="input-with-unit">
+      <div class="input-wrap">
         <input id="hrs" type="number" min="0" step="0.5" value="2">
         <span class="unit">hrs</span>
       </div>
@@ -31,7 +31,9 @@
 
     <div class="row">
       <label for="spb">Spillets per group</label>
-      <input id="spb" type="number" min="1" step="1" value="20">
+      <div class="input-wrap">
+        <input id="spb" type="number" min="1" step="1" value="20">
+      </div>
     </div>
 
     <div class="divider"></div>
@@ -45,7 +47,9 @@
 
     <div id="binsRow" class="row" style="display:none;">
       <label for="bins">Droplet size groups (bins)</label>
-      <input id="bins" type="number" min="1" step="1" value="10">
+      <div class="input-wrap">
+        <input id="bins" type="number" min="1" step="1" value="10">
+      </div>
     </div>
 
     <p id="warning" class="warning" style="display:none;">
@@ -54,6 +58,11 @@
 
     <div id="result" class="result" aria-live="polite">Total spillets: 0</div>
     <div id="guidance" class="guidance"></div>
+
+    <div class="divider"></div>
+    <footer class="footer">
+      © 2025 Oil Spill Response Ltd – Technology Evolution Team
+    </footer>
   </div>
 
   <script src="script.js"></script>

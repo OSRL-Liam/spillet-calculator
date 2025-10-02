@@ -1,15 +1,16 @@
 :root { --border:#ddd; --muted:#555; }
 body { font-family: system-ui, Arial, sans-serif; margin: 16px; max-width: 560px; }
-.header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .logo { height: 40px; }
 h2 { margin: 0; }
 .card { border: 1px solid var(--border); border-radius: 12px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
-.row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; margin: 10px 0; }
-.align-left { grid-template-columns: 1fr; }
-.checkbox { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
-input[type=number] { width: 100px; padding: 6px; }
-.input-with-unit { display: flex; align-items: center; gap: 4px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 10px 0; }
+label { flex: 1; }
+.input-wrap { display: flex; align-items: center; gap: 4px; }
+input[type=number] { width: 100px; padding: 6px; text-align: right; }
 .unit { font-size: 0.9rem; color: var(--muted); }
+.align-left { justify-content: flex-start; }
+.checkbox { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
 .warning { color: #b00020; font-size: 0.92rem; margin: 6px 0 2px; }
 .result { font-size: 1.25rem; font-weight: 700; margin-top: 8px; }
 .divider { border-top: 1px solid var(--border); margin: 8px 0 2px; }
@@ -17,3 +18,4 @@ input[type=number] { width: 100px; padding: 6px; }
 .guidance.ok { color:#006400; background:#eafaea; }
 .guidance.info { color:#333; background:#f0f0f0; }
 .guidance.warn { color:#b00020; background:#fdeaea; }
+.footer { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
