@@ -7,25 +7,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Spillet Calculator</h2>
+  <header class="header">
+    <img src="logo.png" alt="OSRL Logo" class="logo">
+    <h2>Spillet Calculator</h2>
+  </header>
 
   <div class="card">
-    <p class="hint">
-      Rule of thumb: total = (time steps per hour) × (hours of release) × (droplet size groups) × (dots per group)
-    </p>
-
     <div class="row">
-      <label for="tstepMin">Time step (minutes)</label>
-      <input id="tstepMin" type="number" min="1" step="1" value="15">
+      <label for="tstepMin">Time step</label>
+      <div class="input-with-unit">
+        <input id="tstepMin" type="number" min="1" step="1" value="15">
+        <span class="unit">mins</span>
+      </div>
     </div>
 
     <div class="row">
       <label for="hrs">Hours of release</label>
-      <input id="hrs" type="number" min="0" step="0.5" value="2">
+      <div class="input-with-unit">
+        <input id="hrs" type="number" min="0" step="0.5" value="2">
+        <span class="unit">hrs</span>
+      </div>
     </div>
 
     <div class="row">
-      <label for="spb">Spillets per group (10–40 typical)</label>
+      <label for="spb">Spillets per group</label>
       <input id="spb" type="number" min="1" step="1" value="20">
     </div>
 
