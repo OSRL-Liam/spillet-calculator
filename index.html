@@ -1,28 +1,55 @@
-<h2>Spillet Calculator</h2>
-<div class="card">
-  <div class="hint">Rule of thumb: total = (time steps per hour) × (hours of release) × (droplet groups) × (dots per group)</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spillet Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Spillet Calculator</h2>
 
-  <div class="row"><label>Time step (minutes)</label>
-    <input id="tstepMin" type="number" min="1" step="1" value="15"></div>
+  <div class="card">
+    <p class="hint">
+      Rule of thumb: total = (time steps per hour) × (hours of release) × (droplet size groups) × (dots per group)
+    </p>
 
-  <div class="row"><label>Hours of release</label>
-    <input id="hrs" type="number" min="0" step="0.5" value="2"></div>
+    <div class="row">
+      <label for="tstepMin">Time step (minutes)</label>
+      <input id="tstepMin" type="number" min="1" step="1" value="15">
+    </div>
 
-  <div class="row"><label>Spillets per group (10–40 typical)</label>
-    <input id="spb" type="number" min="1" step="1" value="20"></div>
+    <div class="row">
+      <label for="hrs">Hours of release</label>
+      <input id="hrs" type="number" min="0" step="0.5" value="2">
+    </div>
 
-  <!-- Advanced toggle -->
-  <div class="row"><label><input type="checkbox" id="advanced"> Show advanced settings</label></div>
+    <div class="row">
+      <label for="spb">Spillets per group (10–40 typical)</label>
+      <input id="spb" type="number" min="1" step="1" value="20">
+    </div>
 
-  <!-- Advanced setting, hidden by default -->
-  <div id="binsRow" class="row" style="display:none;">
-    <label>Droplet groups (bins)</label>
-    <input id="bins" type="number" min="1" step="1" value="10">
+    <div class="divider"></div>
+
+    <div class="row align-left">
+      <label class="checkbox">
+        <input type="checkbox" id="advanced">
+        <span>Show advanced settings</span>
+      </label>
+    </div>
+
+    <div id="binsRow" class="row" style="display:none;">
+      <label for="bins">Droplet size groups (bins)</label>
+      <input id="bins" type="number" min="1" step="1" value="10">
+    </div>
+
+    <p id="warning" class="warning" style="display:none;">
+      ⚠️ Normally leave <em>bins</em> at <strong>10</strong>. Change only if you understand why.
+    </p>
+
+    <div id="result" class="result" aria-live="polite">Total spillets: 0</div>
   </div>
 
-  <div id="warning" style="display:none; color:red; font-size:0.9rem; margin:8px 0;">
-    ⚠️ Normally leave bins at 10. Change only if you understand why.
-  </div>
-
-  <div id="result">Total spillets: 0</div>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
